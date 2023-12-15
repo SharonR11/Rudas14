@@ -4,7 +4,6 @@
              x:Class="Rudas14.MainPage">
 
     <StackLayout>
-        <Entry Placeholder="Enter Fecha" x:Name="txtFecha" HorizontalOptions="FillAndExpand"/>
         <DatePicker x:Name="DatePicker" />
         <Entry Placeholder="Enter Nombre" x:Name="txtNombre" HorizontalOptions="FillAndExpand"/>
         <Entry Placeholder="Enter Curso" x:Name="txtCurso" HorizontalOptions="FillAndExpand"/>

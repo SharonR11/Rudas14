@@ -13,7 +13,7 @@ namespace Rudas14
         {
             InitializeComponent();
             GetContext().Database.EnsureCreated();
-            MainPage = new MatriculaView();
+            MainPage = new MainPage();
         }
 
         public static AppDbContext GetContext()
