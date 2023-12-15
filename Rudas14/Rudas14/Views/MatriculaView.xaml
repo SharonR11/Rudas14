@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Rudas14.Views.MatriculaView">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Fecha"/>
+            <Entry  Text="{Binding Fecha}" ></Entry>
+            <Label Text="Nombre"/>
+            <Entry Text="{Binding Nombre}"></Entry>
+            <Label Text="Curso"/>
+            <Entry  Text="{Binding Curso}" ></Entry>
+            <Label Text="Genero"/>
+            <Entry  Text="{Binding Genero}" ></Entry>
+            <Button Text="Save" Command="{Binding InsertCommand}" />
+
+            <Entry Placeholder="Filter"  Text="{Binding Filter}" HorizontalOptions="FillAndExpand"/>
+            <Button Text="ShowByText" Command="{Binding SearchCommand}" />
+            <ListView x:Name="lvPeople" ItemsSource="{Binding Matricular}" BackgroundColor="{Binding Color}" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Nombre}"></Label>
+                                <Label Text="{Binding Curso}"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
